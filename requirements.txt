@@ -5,7 +5,7 @@ scikit-learn
 lightgbm
 torch>=2.2,<3
 neuralforecast==3.3.0
-pyarrow
+pyarrow>=14,<25
 jupyter
 pytest
 nbformat
