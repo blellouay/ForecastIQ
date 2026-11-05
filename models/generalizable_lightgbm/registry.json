@@ -1,0 +1,124 @@
+{
+  "categorical_features": [
+    "store",
+    "department",
+    "category",
+    "demand_type"
+  ],
+  "categories": {
+    "category": [
+      "FOODS",
+      "HOBBIES",
+      "HOUSEHOLD"
+    ],
+    "demand_type": [
+      "Smooth",
+      "Erratic",
+      "Intermittent",
+      "Lumpy"
+    ],
+    "department": [
+      "FOODS_1",
+      "FOODS_2",
+      "FOODS_3",
+      "HOBBIES_1",
+      "HOBBIES_2",
+      "HOUSEHOLD_1",
+      "HOUSEHOLD_2"
+    ],
+    "store": [
+      "CA_1",
+      "CA_2",
+      "CA_3",
+      "CA_4",
+      "TX_1",
+      "TX_2",
+      "TX_3",
+      "WI_1",
+      "WI_2",
+      "WI_3"
+    ]
+  },
+  "feature_names": [
+    "horizon",
+    "store",
+    "department",
+    "category",
+    "lag_1",
+    "lag_7",
+    "lag_14",
+    "lag_28",
+    "lag_56",
+    "mean_7",
+    "std_7",
+    "zero_ratio_7",
+    "mean_14",
+    "std_14",
+    "zero_ratio_14",
+    "mean_28",
+    "std_28",
+    "zero_ratio_28",
+    "positive_mean",
+    "recent_trend",
+    "adi",
+    "cv2",
+    "demand_type",
+    "day_of_week",
+    "month"
+  ],
+  "feature_pipeline_id": "m5-generalizable-historical-v1",
+  "mode": "pilot",
+  "models": {
+    "GeneralizableDirectLightGBM": {
+      "kind": "direct",
+      "snapshots": {
+        "1801": {
+          "forecast_origin_day": 1801,
+          "metadata_path": "origin_1801.metadata.json",
+          "trained_through_day": 1792
+        },
+        "1829": {
+          "forecast_origin_day": 1829,
+          "metadata_path": "origin_1829.metadata.json",
+          "trained_through_day": 1820
+        },
+        "1857": {
+          "forecast_origin_day": 1857,
+          "metadata_path": "origin_1857.metadata.json",
+          "trained_through_day": 1848
+        },
+        "1885": {
+          "forecast_origin_day": 1885,
+          "metadata_path": "origin_1885.metadata.json",
+          "trained_through_day": 1876
+        }
+      }
+    },
+    "GeneralizableHurdleLightGBM": {
+      "kind": "hurdle",
+      "snapshots": {
+        "1801": {
+          "forecast_origin_day": 1801,
+          "metadata_path": "origin_1801.metadata.json",
+          "trained_through_day": 1792
+        },
+        "1829": {
+          "forecast_origin_day": 1829,
+          "metadata_path": "origin_1829.metadata.json",
+          "trained_through_day": 1820
+        },
+        "1857": {
+          "forecast_origin_day": 1857,
+          "metadata_path": "origin_1857.metadata.json",
+          "trained_through_day": 1848
+        },
+        "1885": {
+          "forecast_origin_day": 1885,
+          "metadata_path": "origin_1885.metadata.json",
+          "trained_through_day": 1876
+        }
+      }
+    }
+  },
+  "schema_version": 1
+}

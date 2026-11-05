@@ -1,0 +1,649 @@
+{
+  "experiment_name": "unified-benchmark",
+  "experiment_id": "unified-benchmark-20261101T131433Z",
+  "timestamp_utc": "2026-11-01T13:14:33.756993+00:00",
+  "config": {
+    "horizon": 28,
+    "total_days": 1913,
+    "test_origin": 1885,
+    "validation_folds": 3,
+    "random_seeds": [
+      7,
+      21,
+      42,
+      73,
+      101,
+      123,
+      202,
+      314,
+      777,
+      2026
+    ],
+    "sample_sizes": [
+      400,
+      2000,
+      5000,
+      10000
+    ],
+    "adi_threshold": 1.32,
+    "cv2_threshold": 0.49,
+    "leading_zero_policy": "preserve",
+    "alphas": [
+      0.1,
+      0.2,
+      0.3
+    ],
+    "metrics": [
+      "MAE",
+      "MASE",
+      "WAPE",
+      "RMSSE",
+      "bias",
+      "inventory_cost_proxy"
+    ],
+    "underforecast_penalty": 5.0,
+    "overforecast_penalty": 1.0,
+    "evaluation_panel": "data/processed/evaluation_panel.parquet",
+    "scenarios": [
+      "seen",
+      "unseen_product_store"
+    ],
+    "validation_origins": [
+      1801,
+      1829,
+      1857
+    ],
+    "backtest_origins": [
+      1717,
+      1745,
+      1773,
+      1801,
+      1829,
+      1857
+    ],
+    "dl_mode": "fast",
+    "dl_fast_max_steps": 20,
+    "dl_research_max_steps": 750,
+    "dl_fast_input_size": 112,
+    "dl_research_input_size": 168,
+    "dl_fast_batch_size": 16,
+    "dl_research_batch_size": 8,
+    "dl_learning_rate": 0.0005,
+    "dl_validation_check_steps": 50
+  },
+  "python": "3.11.15",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "package_versions": {
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "lightgbm": "4.7.0",
+    "torch": "2.15.0",
+    "neuralforecast": "3.3.0",
+    "pyarrow": "26.0.0"
+  },
+  "git_commit": "HEAD",
+  "source_hashes": {
+    "${PROJECT_ROOT}\\data\\processed\\evaluation_panel.parquet": "590db74ac5463d92d08e7522f938dc1d6c3a896ac33e8c332b95172e987e5f76"
+  },
+  "extra": {
+    "available_models": [
+      "Average",
+      "Croston",
+      "DeepAR",
+      "Direct LightGBM",
+      "Hurdle LightGBM",
+      "NHITS",
+      "Naive",
+      "SBA",
+      "SES",
+      "SeasonalNaive",
+      "TSB"
+    ],
+    "failed_or_missing": [],
+    "final_period_status": "previously explored",
+    "multi_origin_complete_models": [
+      "Average",
+      "Croston",
+      "DeepAR",
+      "Direct LightGBM",
+      "Hurdle LightGBM",
+      "NHITS",
+      "Naive",
+      "SBA",
+      "SES",
+      "SeasonalNaive",
+      "TSB"
+    ],
+    "multi_origin_coverage": [
+      {
+        "model": "Average",
+        "forecast_origin": 1717,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "Average",
+        "forecast_origin": 1745,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "Average",
+        "forecast_origin": 1773,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "Average",
+        "forecast_origin": 1801,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "Average",
+        "forecast_origin": 1829,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "Average",
+        "forecast_origin": 1857,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "Naive",
+        "forecast_origin": 1717,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "Naive",
+        "forecast_origin": 1745,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "Naive",
+        "forecast_origin": 1773,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "Naive",
+        "forecast_origin": 1801,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "Naive",
+        "forecast_origin": 1829,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "Naive",
+        "forecast_origin": 1857,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "SeasonalNaive",
+        "forecast_origin": 1717,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "SeasonalNaive",
+        "forecast_origin": 1745,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "SeasonalNaive",
+        "forecast_origin": 1773,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "SeasonalNaive",
+        "forecast_origin": 1801,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "SeasonalNaive",
+        "forecast_origin": 1829,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "SeasonalNaive",
+        "forecast_origin": 1857,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "SES",
+        "forecast_origin": 1717,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "SES",
+        "forecast_origin": 1745,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "SES",
+        "forecast_origin": 1773,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "SES",
+        "forecast_origin": 1801,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "SES",
+        "forecast_origin": 1829,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "SES",
+        "forecast_origin": 1857,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "Croston",
+        "forecast_origin": 1717,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "Croston",
+        "forecast_origin": 1745,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "Croston",
+        "forecast_origin": 1773,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "Croston",
+        "forecast_origin": 1801,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "Croston",
+        "forecast_origin": 1829,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "Croston",
+        "forecast_origin": 1857,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "SBA",
+        "forecast_origin": 1717,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "SBA",
+        "forecast_origin": 1745,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "SBA",
+        "forecast_origin": 1773,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "SBA",
+        "forecast_origin": 1801,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "SBA",
+        "forecast_origin": 1829,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "SBA",
+        "forecast_origin": 1857,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "TSB",
+        "forecast_origin": 1717,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "TSB",
+        "forecast_origin": 1745,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "TSB",
+        "forecast_origin": 1773,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "TSB",
+        "forecast_origin": 1801,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "TSB",
+        "forecast_origin": 1829,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "TSB",
+        "forecast_origin": 1857,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "Direct LightGBM",
+        "forecast_origin": 1717,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "Direct LightGBM",
+        "forecast_origin": 1745,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "Direct LightGBM",
+        "forecast_origin": 1773,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "Direct LightGBM",
+        "forecast_origin": 1801,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "Direct LightGBM",
+        "forecast_origin": 1829,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "Direct LightGBM",
+        "forecast_origin": 1857,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "Hurdle LightGBM",
+        "forecast_origin": 1717,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "Hurdle LightGBM",
+        "forecast_origin": 1745,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "Hurdle LightGBM",
+        "forecast_origin": 1773,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "Hurdle LightGBM",
+        "forecast_origin": 1801,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "Hurdle LightGBM",
+        "forecast_origin": 1829,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "Hurdle LightGBM",
+        "forecast_origin": 1857,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "NHITS",
+        "forecast_origin": 1717,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "NHITS",
+        "forecast_origin": 1745,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "NHITS",
+        "forecast_origin": 1773,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "NHITS",
+        "forecast_origin": 1801,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "NHITS",
+        "forecast_origin": 1829,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "NHITS",
+        "forecast_origin": 1857,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "DeepAR",
+        "forecast_origin": 1717,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "DeepAR",
+        "forecast_origin": 1745,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "DeepAR",
+        "forecast_origin": 1773,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "DeepAR",
+        "forecast_origin": 1801,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "DeepAR",
+        "forecast_origin": 1829,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      },
+      {
+        "model": "DeepAR",
+        "forecast_origin": 1857,
+        "rows": 11200,
+        "unique_rows": 11200,
+        "expected_rows": 11200,
+        "status": "complete"
+      }
+    ]
+  }
+}

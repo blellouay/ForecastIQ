@@ -1,0 +1,16 @@
+{
+  "run_size": "full_all",
+  "smoke_test": false,
+  "origins": [
+    1801,
+    1829,
+    1857,
+    1885
+  ],
+  "training_series": 30490,
+  "seen_evaluation_series": 400,
+  "unseen_evaluation_series": 400,
+  "unseen_evaluation_is_genuine": false,
+  "validation_csv": "full_all_validation_metrics.csv",
+  "note": "Fixed-config origin-specific backtesting; not nested hyperparameter selection."
+}

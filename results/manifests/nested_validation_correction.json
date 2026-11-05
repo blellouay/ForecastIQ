@@ -1,0 +1,29 @@
+{
+  "experiment_name": "nested-validation-correction",
+  "date": "2026-11-01",
+  "protocol": {
+    "panel_series": 400,
+    "horizon": 28,
+    "outer_origins": [1717, 1745, 1773, 1801, 1829, 1857],
+    "inner_fold_policy": "latest three non-overlapping origins satisfying inner_origin + 28 <= outer_origin",
+    "selection_metric": "mean MAE across every eligible inner fold",
+    "missing_fold_policy": "configuration ineligible",
+    "tie_break": "ascending stable configuration ID",
+    "explored_period": "d_1886-d_1913; descriptive only"
+  },
+  "executed": {
+    "tests": "160 passed",
+    "notebook_compile": "passed",
+    "nested_statistical_smoke_outer_origin": 1717,
+    "nested_statistical_smoke_inner_origins": [1633, 1661, 1689],
+    "nested_statistical_smoke_prediction_rows": 78400,
+    "nested_statistical_smoke_status": "matched and chronology-validated"
+  },
+  "pending": [
+    "six-origin corrected statistical rerun from updated notebook",
+    "six-origin Direct and Hurdle LightGBM execution",
+    "six-origin nested N-HiTS and DeepAR research execution",
+    "hierarchical paired intervals requiring complete ML/DL coverage",
+    "unseen-series Scenario B"
+  ]
+}

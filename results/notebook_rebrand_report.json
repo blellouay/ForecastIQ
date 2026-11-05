@@ -1,0 +1,20 @@
+{
+  "validated_after_rebrand": true,
+  "notebooks_inspected": 10,
+  "notebooks_renamed": 0,
+  "source_cells_updated": 18,
+  "outputs_cleared": 15,
+  "compile_failures": [],
+  "files": [
+    {"path": "checkpoints/pre_dl_completion_20261101/03D_nhits_deepar.ipynb", "source_cells_updated": 1, "outputs_cleared": 2},
+    {"path": "checkpoints/pre_dl_completion_20261101/04_unified_forecasting_benchmark.ipynb", "source_cells_updated": 1, "outputs_cleared": 0},
+    {"path": "notebooks/01_data_exploration_full_export.ipynb", "source_cells_updated": 2, "outputs_cleared": 3},
+    {"path": "notebooks/02_forecasting_4_workflows_10_seeds.ipynb", "source_cells_updated": 3, "outputs_cleared": 4},
+    {"path": "notebooks/02B_full_statistical_benchmark.ipynb", "source_cells_updated": 2, "outputs_cleared": 1},
+    {"path": "notebooks/03_global_machine_learning_forecasting.ipynb", "source_cells_updated": 2, "outputs_cleared": 2},
+    {"path": "notebooks/03B_hurdle_lightgbm.ipynb", "source_cells_updated": 2, "outputs_cleared": 2},
+    {"path": "notebooks/03C_large_scale_lightgbm_hurdle.ipynb", "source_cells_updated": 2, "outputs_cleared": 1},
+    {"path": "notebooks/03D_nhits_deepar.ipynb", "source_cells_updated": 2, "outputs_cleared": 0},
+    {"path": "notebooks/04_unified_forecasting_benchmark.ipynb", "source_cells_updated": 1, "outputs_cleared": 0}
+  ]
+}

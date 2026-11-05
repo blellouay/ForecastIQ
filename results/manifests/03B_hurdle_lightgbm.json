@@ -1,0 +1,53 @@
+{
+  "experiment_name": "03B_hurdle_lightgbm",
+  "experiment_id": "03B_hurdle_lightgbm-20261101T103144Z",
+  "timestamp_utc": "2026-11-01T10:31:44.878493+00:00",
+  "config": {
+    "horizon": 28,
+    "total_days": 1913,
+    "test_origin": 1885,
+    "validation_folds": 3,
+    "random_seeds": [
+      7,
+      21,
+      42,
+      73,
+      101,
+      123,
+      202,
+      314,
+      777,
+      2026
+    ],
+    "sample_sizes": [
+      400,
+      2000,
+      5000,
+      10000
+    ],
+    "adi_threshold": 1.32,
+    "cv2_threshold": 0.49,
+    "leading_zero_policy": "preserve",
+    "alphas": [
+      0.1,
+      0.2,
+      0.3
+    ],
+    "metrics": [
+      "MAE",
+      "MASE",
+      "WAPE",
+      "RMSSE",
+      "bias",
+      "inventory_cost_proxy"
+    ],
+    "underforecast_penalty": 5.0,
+    "overforecast_penalty": 1.0
+  },
+  "python": "3.11.15",
+  "git_commit": "HEAD",
+  "source_hashes": {
+    "${PROJECT_ROOT}\\data\\raw\\sales_train_validation.csv": "f368e66ed1dbecb48b2cc8fc589bf68b3deddbbb36bf5c88b4d6d0a09b9b6724"
+  },
+  "extra": {}
+}

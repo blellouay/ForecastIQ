@@ -1,0 +1,103 @@
+{
+  "experiment": "hybrid-generalizable-pilot",
+  "scenario_b_series": 20,
+  "scenario_b_origins": [
+    1801,
+    1829,
+    1857
+  ],
+  "training_population": "frozen 400-series panel",
+  "evaluation_population": "first deterministic M5 identities excluded from the 400-series mapping",
+  "item_group_holdout": false,
+  "cold_start_series": 5,
+  "cold_start_is_simulated": true,
+  "results": [
+    {
+      "model": "SBA",
+      "series_folds": 60,
+      "MAE": 1.775390506831847,
+      "MASE": 1.1999256726640313,
+      "RMSSE": 0.8039712083455416,
+      "WAPE": 1.4541456063453508,
+      "bias": 0.026687512817919746
+    },
+    {
+      "model": "Average",
+      "series_folds": 60,
+      "MAE": 1.7971590719344328,
+      "MASE": 1.1140860052037505,
+      "RMSSE": 0.7959130394992127,
+      "WAPE": 1.3420923733609047,
+      "bias": -0.09927589110599354
+    },
+    {
+      "model": "TSB",
+      "series_folds": 60,
+      "MAE": 1.804333993244348,
+      "MASE": 1.2265093085962349,
+      "RMSSE": 0.8146264795043409,
+      "WAPE": 1.4767501925284272,
+      "bias": 0.0863825383435865
+    },
+    {
+      "model": "SES",
+      "series_folds": 60,
+      "MAE": 1.8073466301988759,
+      "MASE": 1.2146967236365844,
+      "RMSSE": 0.8150383852645429,
+      "WAPE": 1.4514210038906747,
+      "bias": 0.11234230553422424
+    },
+    {
+      "model": "GeneralizableDirectLightGBM",
+      "series_folds": 60,
+      "MAE": 1.8383888610000954,
+      "MASE": 1.399589149062071,
+      "RMSSE": 0.8376977077232921,
+      "WAPE": 1.6483925215283046,
+      "bias": 0.23466971670122377
+    },
+    {
+      "model": "GeneralizableHurdleLightGBM",
+      "series_folds": 60,
+      "MAE": 1.8420103923374909,
+      "MASE": 1.2903811470245543,
+      "RMSSE": 0.8066004889104406,
+      "WAPE": 1.5439798949758097,
+      "bias": 0.24191568115981024
+    },
+    {
+      "model": "Croston",
+      "series_folds": 60,
+      "MAE": 1.8444919577398653,
+      "MASE": 1.252871661936663,
+      "RMSSE": 0.8160084424480487,
+      "WAPE": 1.5322282899378306,
+      "bias": 0.22548612535324405
+    },
+    {
+      "model": "Naive",
+      "series_folds": 60,
+      "MAE": 2.138690476190476,
+      "MASE": 1.4219319676979862,
+      "RMSSE": 1.0434779070203297,
+      "WAPE": 1.6989418983826678,
+      "bias": -0.11250000000000003
+    },
+    {
+      "model": "SeasonalNaive",
+      "series_folds": 60,
+      "MAE": 2.1767857142857143,
+      "MASE": 1.3433695316075098,
+      "RMSSE": 1.064732157734637,
+      "WAPE": 1.5373053075197955,
+      "bias": 0.01607142857142859
+    }
+  ],
+  "cold_start_mean_mae": 0.9479591836734691,
+  "limitations": [
+    "Pilot sample only",
+    "No genuine launch dates",
+    "Item IDs may appear at other stores in training"
+  ]
+}

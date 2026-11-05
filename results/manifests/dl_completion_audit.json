@@ -1,0 +1,32 @@
+{
+  "experiment_name": "dl-completion-audit",
+  "date": "2026-11-01",
+  "status": "pipeline_implemented_research_runs_pending",
+  "environment": {
+    "python": "3.11.15",
+    "torch": "2.15.0+cpu",
+    "torch_cuda_build": null,
+    "cuda_available": false,
+    "neuralforecast": "3.3.0",
+    "ram_gib": 15.71,
+    "nvidia_smi": "Failed to initialize NVML: Not Found"
+  },
+  "modes": {
+    "fast": {"max_steps": 20, "input_size": 112, "validation_origins": [1857]},
+    "research": {"max_steps": 750, "input_size": 168, "validation_origins": [1801, 1829, 1857]}
+  },
+  "executed": {
+    "automated_tests": "151 passed",
+    "notebook_code_compile": "passed",
+    "real_data_ml_smoke_origin": 1857,
+    "real_data_ml_smoke_rows": 22400,
+    "real_data_ml_smoke_matched": true
+  },
+  "not_executed": [
+    "750-step neural validation",
+    "six-origin ML benchmark",
+    "six-origin DL benchmark",
+    "multi-origin ML/DL confidence intervals",
+    "unseen-series Scenario B"
+  ]
+}

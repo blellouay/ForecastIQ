@@ -1,0 +1,133 @@
+{
+  "models": {
+    "DirectLightGBM": {
+      "feature_names": [
+        "series_code",
+        "horizon",
+        "lag_1",
+        "lag_7",
+        "lag_14",
+        "lag_28",
+        "lag_56",
+        "mean_7",
+        "std_7",
+        "zero_ratio_7",
+        "mean_28",
+        "std_28",
+        "zero_ratio_28",
+        "mean_56",
+        "std_56",
+        "zero_ratio_56",
+        "last_28_vs_prev_28",
+        "day_of_week",
+        "month"
+      ],
+      "feature_pipeline_id": "m5-notebook03-historical-snapshot-v1",
+      "kind": "direct",
+      "mapping_path": "lightgbm/series_mapping.json",
+      "snapshots": {
+        "1801": {
+          "classifier_path": "lightgbm/hurdle_classifier_origin_1801.joblib",
+          "feature_pipeline_id": "m5-notebook03-historical-snapshot-v1",
+          "forecast_origin_day": 1801,
+          "metadata_path": "lightgbm/origin_1801.metadata.json",
+          "model_path": "lightgbm/direct_origin_1801.joblib",
+          "regressor_path": "lightgbm/hurdle_regressor_origin_1801.joblib",
+          "trained_through_day": 1792
+        },
+        "1829": {
+          "classifier_path": "lightgbm/hurdle_classifier_origin_1829.joblib",
+          "feature_pipeline_id": "m5-notebook03-historical-snapshot-v1",
+          "forecast_origin_day": 1829,
+          "metadata_path": "lightgbm/origin_1829.metadata.json",
+          "model_path": "lightgbm/direct_origin_1829.joblib",
+          "regressor_path": "lightgbm/hurdle_regressor_origin_1829.joblib",
+          "trained_through_day": 1820
+        },
+        "1857": {
+          "classifier_path": "lightgbm/hurdle_classifier_origin_1857.joblib",
+          "feature_pipeline_id": "m5-notebook03-historical-snapshot-v1",
+          "forecast_origin_day": 1857,
+          "metadata_path": "lightgbm/origin_1857.metadata.json",
+          "model_path": "lightgbm/direct_origin_1857.joblib",
+          "regressor_path": "lightgbm/hurdle_regressor_origin_1857.joblib",
+          "trained_through_day": 1848
+        },
+        "1885": {
+          "classifier_path": "lightgbm/hurdle_classifier_origin_1885.joblib",
+          "feature_pipeline_id": "m5-notebook03-historical-snapshot-v1",
+          "forecast_origin_day": 1885,
+          "metadata_path": "lightgbm/origin_1885.metadata.json",
+          "model_path": "lightgbm/direct_origin_1885.joblib",
+          "regressor_path": "lightgbm/hurdle_regressor_origin_1885.joblib",
+          "trained_through_day": 1876
+        }
+      }
+    },
+    "HurdleLightGBM": {
+      "feature_names": [
+        "series_code",
+        "horizon",
+        "lag_1",
+        "lag_7",
+        "lag_14",
+        "lag_28",
+        "lag_56",
+        "mean_7",
+        "std_7",
+        "zero_ratio_7",
+        "mean_28",
+        "std_28",
+        "zero_ratio_28",
+        "mean_56",
+        "std_56",
+        "zero_ratio_56",
+        "last_28_vs_prev_28",
+        "day_of_week",
+        "month"
+      ],
+      "feature_pipeline_id": "m5-notebook03-historical-snapshot-v1",
+      "kind": "hurdle",
+      "mapping_path": "lightgbm/series_mapping.json",
+      "snapshots": {
+        "1801": {
+          "classifier_path": "lightgbm/hurdle_classifier_origin_1801.joblib",
+          "feature_pipeline_id": "m5-notebook03-historical-snapshot-v1",
+          "forecast_origin_day": 1801,
+          "metadata_path": "lightgbm/origin_1801.metadata.json",
+          "model_path": "lightgbm/direct_origin_1801.joblib",
+          "regressor_path": "lightgbm/hurdle_regressor_origin_1801.joblib",
+          "trained_through_day": 1792
+        },
+        "1829": {
+          "classifier_path": "lightgbm/hurdle_classifier_origin_1829.joblib",
+          "feature_pipeline_id": "m5-notebook03-historical-snapshot-v1",
+          "forecast_origin_day": 1829,
+          "metadata_path": "lightgbm/origin_1829.metadata.json",
+          "model_path": "lightgbm/direct_origin_1829.joblib",
+          "regressor_path": "lightgbm/hurdle_regressor_origin_1829.joblib",
+          "trained_through_day": 1820
+        },
+        "1857": {
+          "classifier_path": "lightgbm/hurdle_classifier_origin_1857.joblib",
+          "feature_pipeline_id": "m5-notebook03-historical-snapshot-v1",
+          "forecast_origin_day": 1857,
+          "metadata_path": "lightgbm/origin_1857.metadata.json",
+          "model_path": "lightgbm/direct_origin_1857.joblib",
+          "regressor_path": "lightgbm/hurdle_regressor_origin_1857.joblib",
+          "trained_through_day": 1848
+        },
+        "1885": {
+          "classifier_path": "lightgbm/hurdle_classifier_origin_1885.joblib",
+          "feature_pipeline_id": "m5-notebook03-historical-snapshot-v1",
+          "forecast_origin_day": 1885,
+          "metadata_path": "lightgbm/origin_1885.metadata.json",
+          "model_path": "lightgbm/direct_origin_1885.joblib",
+          "regressor_path": "lightgbm/hurdle_regressor_origin_1885.joblib",
+          "trained_through_day": 1876
+        }
+      }
+    }
+  },
+  "schema_version": 1
+}

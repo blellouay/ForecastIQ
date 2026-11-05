@@ -1,0 +1,1 @@
+"""ForecastIQ Streamlit dashboard package."""

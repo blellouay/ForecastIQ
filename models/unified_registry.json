@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "selection_rule": "lowest mean MAE on identical 28-day historical folds for the same series",
+  "models": {
+    "statistical": {
+      "names": ["Average", "Naive", "SeasonalNaive", "SES", "Croston", "SBA", "TSB"],
+      "inference": "arbitrary origin with sufficient history",
+      "selection": "matched rolling-origin validation"
+    },
+    "lightgbm": {
+      "names": ["DirectLightGBM", "HurdleLightGBM"],
+      "registry": "registry.json",
+      "supported_origins": [1801, 1829, 1857, 1885],
+      "horizon": 28,
+      "series_population": "models/lightgbm/series_mapping.json"
+    },
+    "generalizable_lightgbm": {
+      "names": ["GeneralizableDirectLightGBM", "GeneralizableHurdleLightGBM"],
+      "registry": "generalizable_lightgbm/registry.json",
+      "supported_origins": [1801, 1829, 1857, 1885],
+      "horizon": 28,
+      "series_identifier_feature": false,
+      "training_mode": "pilot",
+      "scenario_support": ["known_series", "unseen_series_with_history"]
+    },
+    "nhits": {
+      "name": "NHITS_small",
+      "artifact": "neuralforecast/nhits_small",
+      "training_cutoff_day": 1857,
+      "horizon": 28,
+      "supplied_history_inference": true,
+      "selection_eligible": false,
+      "selection_exclusion": "No leakage-safe checkpoint snapshots for origins 1801 and 1829"
+    },
+    "nhits_scalable": {
+      "name": "NHITS_scalable",
+      "artifact_root": "nhits_full_m5/full_all",
+      "supported_origins": [1801, 1829, 1857, 1885],
+      "training_cutoff_matches_origin": true,
+      "training_population": "all 30490 M5 product-store series",
+      "run_size": "full_all",
+      "horizon": 28,
+      "input_size": 56,
+      "max_steps": 500,
+      "supplied_history_inference": true,
+      "selection_eligible": true,
+      "selection_requirement": "exact snapshots at all three validation origins and final origin",
+      "negative_policy": "clip_to_zero_before_scoring_and_final_output",
+      "unseen_generalization_claim": false
+    },
+    "deepar": {
+      "name": "DeepAR",
+      "inference_eligible": false,
+      "selection_eligible": false,
+      "exclusion": "Lightning training checkpoints are not a verified deployable NeuralForecast bundle"
+    },
+    "cold_start": {
+      "name": "ColdStartComparable",
+      "inference_eligible": true,
+      "selection_eligible": false,
+      "required_metadata": ["category", "department", "store"],
+      "method": "exact-group median shrunk toward category median",
+      "warning": "Simulated no-history baseline; M5 has no verified launch dates"
+    }
+  }
+}
