@@ -21,6 +21,7 @@ include = ["src*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+addopts = "--basetemp=.pytest_runtime"
 markers = ["integration: requires private datasets or saved model artifacts"]
 
 [tool.ruff]
